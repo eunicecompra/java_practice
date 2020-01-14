@@ -2,9 +2,7 @@ import java.util.*;
 
 class Checker implements Comparator<Player>{
     @Override
-    public int compare(Player o1, Player o2) {
-        Player p1 = (Player) o1;
-        Player p2 = (Player) o2;
+    public int compare(Player p1, Player p2) {
         if(p1.score < p2.score){
             return -1;
         }else if(p1.score == p2.score){
