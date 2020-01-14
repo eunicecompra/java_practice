@@ -1,8 +1,8 @@
 import java.util.*;
 
-class Checker implements Comparator{
+class Checker implements Comparator<Player>{
     @Override
-    public int compare(Object o1, Object o2) {
+    public int compare(Player o1, Player o2) {
         Player p1 = (Player) o1;
         Player p2 = (Player) o2;
         if(p1.score < p2.score){
