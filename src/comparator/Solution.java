@@ -6,7 +6,7 @@ class Checker implements Comparator<Player>{
         if(p2.score < p1.score){
             return -1;
         }else if(p1.score == p2.score){
-            return p2.name.compareTo(p1.name);
+            return p1.name.compareTo(p2.name);
         }
         return 0;
     }
