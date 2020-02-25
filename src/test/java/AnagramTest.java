@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -9,6 +10,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AnagramTest {
     private static final ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -25,6 +27,11 @@ public class AnagramTest {
         out.reset();
         System.setIn(origIn);
         System.setOut(origOut);
+    }
+
+    @Test
+    public void testAnagramClass() {
+        new Anagram();
     }
 
     @ParameterizedTest
